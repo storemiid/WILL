@@ -15,6 +15,9 @@ function pluck(array, propiedad) {
 
   // Tu código acá:
 
+ var newarra=array.map(busc=>busc[propiedad]);
+return newarra;
+
 }
 
 // No modifiques nada debajo de esta linea //

@@ -14,6 +14,14 @@ function numeroSimetrico(num) {
 
   // Tu código:
 
+ 
+  var simentrico=num.toString()
+  var comp=simentrico.split("").reverse().join("");
+  if(simentrico==comp)return true
+  if(simentrico!=comp)return false
+
+  
+
 }
 
 // No modifiques nada debajo de esta linea //

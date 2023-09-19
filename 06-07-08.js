@@ -7,12 +7,19 @@
 function crearClasePersona() {
   class Persona {
     constructor(nombre, edad, hobbies, amigos) {
-      // El constructor de la clase Persona recibe nombre (string), edad (integer), hobbies (array de strings), amigos (array de objetos)
+      // El constructor de la clase Persona recibe nombre (string), edad (integer), hobbies (array de strings),
+      // amigos (array de objetos)
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre=nombre;
+this.edad=edad;
+this.hobbies=hobbies;
+this.amigos=amigos;
 
     }
+
+    return 
 
     addFriend(nombre, edad) {
       // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
@@ -20,6 +27,8 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.amigos.push({nombre:nombre,edad:edad})
+
 
     }
 
@@ -28,6 +37,7 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      this.hobbies.push(hobby)
 
     }
     getFriends() {
@@ -38,6 +48,8 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
+     var rets=this.amigos.map(x=>x.nombre)
+     return rets
 
     }
 
@@ -47,6 +59,7 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
+    return this.hobbies.filter(d=>d)
 
     }
 
@@ -66,6 +79,14 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
+      var sum=0;
+      var valu=this.amigos.map(e=>e.edad)
+      valu.forEach(element => {
+      sum+=element;
+      return sum;
+      });
+        return sum/valu.length
+     
 
     }
   };
